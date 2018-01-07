@@ -48,7 +48,7 @@ public class CPainting extends Canvas implements MouseListener {
   // MODIFICATION: changer le type
   private int[][] mCouleurs;
   // couleur du fond
-  // MODIFICATION: Utiliser des nombres hexaécimaux pour réprésenter les couleurs 
+  // MODIFICATION: Utiliser des nombres hexadécimaux pour réprésenter les couleurs 
   // et éviter de créer des objets
   private int mCouleurFond = 0x00FFFFFF;
   // dimensions
@@ -97,7 +97,6 @@ public class CPainting extends Canvas implements MouseListener {
   
   /******************************************************************************
    * Titre : Color getRed Description : Cette fonction renvoie la couleur rouge
-   * d'une case
    ******************************************************************************/
   public final int getRed(int Color) {
 	  return (Color>>16) & 0x00FF;
@@ -105,15 +104,12 @@ public class CPainting extends Canvas implements MouseListener {
   
   /******************************************************************************
    * Titre : Color getGreen Description : Cette fonction renvoie la couleur vert
-   * d'une case
    ******************************************************************************/
   public final int getGreen(int Color) {
 	  return (Color>>8) & 0x00FF;
   }
   
   /******************************************************************************
-   * Titre : Color getBlue Description : Cette fonction renvoie la couleur bleu
-   * d'une case
    ******************************************************************************/
   public final int getBlue(int Color) {
 	  return Color & 0x00FF;
@@ -157,7 +153,7 @@ public class CPainting extends Canvas implements MouseListener {
 
       for (i = 0; i != mDimension.width; i++) {
         for (j = 0; j != mDimension.height; j++) {
-            //MODIFICATION: utilisation d'un une valeur fix au lieu d'un objet
+            //MODIFICATION: utilisation d'une valeur fixe au lieu d'un objet
         	mCouleurs[i][j] = mCouleurFond;
         }
       }
